@@ -25,3 +25,5 @@ if __name__ == '__main__':
 
         print(f"[Brute Force] [3X + 1 System Message] {triedCounter} Combinations tried so far.")
         print(f"[Brute Force] [3X + 1 System Message] {gotOneCounter} Loops passed so far.")
+
+        print('test')
