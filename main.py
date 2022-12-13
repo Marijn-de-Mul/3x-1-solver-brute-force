@@ -1,29 +1,37 @@
+def main(num):
+    if num % 2 == 0:
+        return int(num/2)
+    return 3 * num +1
+# ori_num = 1
+# max_num = ori_num
+# num_list = []
+# while h:
+#     num = ori_num
+#     print(num)
+#     while not num in num_list or num != 1:
+#         num = main(num)
+#         num_list.append(num)
+#         print(num)
+#         if num <= max_num:
+#             break
+#     max_num = ori_num
+#     ori_num += 1
+#     num_list = []
+#     print("==============================================================")
 
 
-tempNumber = 1
-triedCounter = 1
-gotOneCounter = 1
 
-if __name__ == '__main__':
-    while tempNumber >= 0:
-        tempNumber = int(tempNumber) + 1
+ori_num = 0
+max_num = ori_num
+num_list = []
+while True:
+    num = ori_num
+    num_list.append(num)
+    while not(ori_num % 2 == 0 or num == 1 or num <= max_num):
+        print(num)
+        num = main(num)
 
-        if tempNumber % 2:
-            tempNumber = int(tempNumber) / 2
-            if int(tempNumber) == 1:
-                gotOneCounter += 1
+    max_num = ori_num
+    ori_num +=1
+    print("==============================================")
 
-            triedCounter += 1
-        else:
-            tempNumber = int(tempNumber) * 3 + 1
-            if int(tempNumber) == 1:
-                gotOneCounter += 1
-
-            triedCounter += 1
-
-        print("[Brute Force] [3X + 1 System Message] New combination tried.")
-
-        print(f"[Brute Force] [3X + 1 System Message] {triedCounter} Combinations tried so far.")
-        print(f"[Brute Force] [3X + 1 System Message] {gotOneCounter} Loops passed so far.")
-
-        print('test')
